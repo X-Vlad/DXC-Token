@@ -72,7 +72,7 @@ contract DXCtoken {
 		balances[_from] -= _amount;
 		balances[_to] += _amount;
 
-        allowed[_from][msg.sender] -= _amount;
+		allowed[_from][msg.sender] -= _amount;
 		
 		emit Transfer(_from, _to, _amount);
 		
