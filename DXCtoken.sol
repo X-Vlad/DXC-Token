@@ -29,8 +29,8 @@ contract DXCtoken {
 		balances[ownerAddress] = _totalSupply-_amountDev;
 		balances[devAddress] = _amountDev;
 
-        emit Transfer(address(0), ownerAddress, balances[ownerAddress]);
-        emit Transfer(address(0), devAddress, balances[devAddress]);
+		emit Transfer(address(0), ownerAddress, balances[ownerAddress]);
+		emit Transfer(address(0), devAddress, balances[devAddress]);
 
 		timelock[devAddress] = block.timestamp + _TIMELOCK;
 	}
